@@ -38,13 +38,11 @@ Servers **MUST** send all JSON API data in response documents with
 the header `Content-Type: application/vnd.api+json`.
 
 Servers **MUST** return a `406 Not Acceptable` status code if the
-`application/vnd.api+json` media type is modified by the `ext` parameter in
+`application/vnd.api+json` media type is modified by any parameter in
 the `Accept` header of a request. Otherwise, servers **MUST** return a `415
 Unsupported Media Type` status code if the `application/vnd.api+json` media
-type is modified by the `ext` parameter in the `Content-Type` header of a
-request. Servers **MUST** ignore all other parameters for the
-`application/vnd.api+json` media type in `Accept` and `Content-Type`
-headers.
+type is modified by any parameter in the `Content-Type` header of a
+request.
 
 > Note: These requirements may allow future versions of this specification
 to support an extension mechanism based upon the `ext` media type parameter.
